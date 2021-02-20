@@ -2,7 +2,7 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
   const control_sequences = ['--discard-next', '--discard-prev', '--double-prev', '--double-next', 'deleted'];
-  if(!Array.isArray(arr)) throw new CustomError();
+  if(!Array.isArray(arr)) throw new Error("Error thrown");
 
   let array = [];
   Object.assign(array, arr);
@@ -10,7 +10,7 @@ module.exports = function transform(arr) {
   let value = 0;
   let index = 0;
   while(true){
-    if(!Array.isArray(arr)) throw new CustomError();
+    if(!Array.isArray(arr)) throw new Error("Error thrown");
 
     let array = [];
     Object.assign(array, arr);

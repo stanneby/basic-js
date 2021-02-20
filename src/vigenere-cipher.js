@@ -41,7 +41,7 @@ class VigenereCipheringMachine {
   }
 
   encrypt(message, key) {
-    if(typeof message != 'string' || typeof key != 'string') throw new CustomError('Not implemented');
+    if(typeof message != 'string' || typeof key != 'string') throw new Error("Error thrown");
     
     let messageLength = message.length;
     let keyLength = key.length;
@@ -64,7 +64,7 @@ class VigenereCipheringMachine {
   }    
   
   decrypt(encryptedMessage, key) {
-    if(typeof message != 'string' || typeof key != 'string') throw new CustomError('Not implemented');
+    if(typeof encryptedMessage != 'string' || typeof key != 'string') throw new Error("Error thrown");
     
     let result = '';
     let messageLength = encryptedMessage.length;

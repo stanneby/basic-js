@@ -13,7 +13,7 @@ const chainMaker = {
   removeLink(position) {
     if(position < 1 || position > this.chain.length){ 
       this.chain = [];
-      throw new CustomError() 
+      throw new Error("Error thrown");
     }
     this.chain.splice(position-1, 1);
     return this;

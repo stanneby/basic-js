@@ -2,9 +2,9 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = function getSeason(date) {
   if(typeof date == 'undefined') return 'Unable to determine the time of year!';
-  if(! (typeof date.getMonth === 'function') ) throw new CustomError('Not implemented');
+  if(! (typeof date.getMonth === 'function') ) throw new Error("Error thrown");;
   let stringed = date.toString().split(' ');
-  if(date.getDate() != parseInt(stringed[2])) throw new CustomError('Not implemented');
+  if(date.getDate() != parseInt(stringed[2])) throw new Error("Error thrown");;
 
   let month = date.getMonth();
   if(month >= 11 || month <= 1){ return 'winter' }
